@@ -1,0 +1,52 @@
+<div>
+<div class="card-header">
+  <span>
+    Search : 
+    <input type="text"
+    [(ngModel)] = 'listFilter'/>
+  </span>
+  
+  <span>
+      <a [routerLink] = "['/add-employee']">
+         <button id="add-btn">
+           Add New
+         </button>
+     </a>
+  </span>
+</div>
+
+<div class="box">
+  <div class="body" *ngFor = 'let employee of filteredEmployee'>
+    <div>
+      <span class="firstLabel">{{employee.employeeFirstName}}</span>
+      <span>{{employee.employeeLastName}}</span>
+    </div>
+    <br>
+
+      <div class="block-div">
+
+        <div>
+          <div class="row">
+             {{employee.employeeAge}},
+             {{employee.employeeGender}}
+          </div>
+
+          <p>{{employee.designation}}</p>
+        </div>
+
+        <div>
+          <button class="bt" id="delcolor" (click) = "onDeleteClick(employee.employeeID)">Delete</button>
+          <a [routerLink] = "['/add-employee', employee.employeeID]">
+            <button type="button" class="bt">
+              Edit
+            </button>
+          </a>
+            
+          
+        </div>  
+        
+      </div>
+
+  </div>
+</div>
+</div>

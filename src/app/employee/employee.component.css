@@ -1,0 +1,51 @@
+.box{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px 2em
+}
+
+.card-header{
+    margin: 30px 20px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.body{
+    border: 1px solid grey;
+    padding-left: 10px
+}
+
+.bt, #add-btn {
+    background-color: blue;
+    color: white;
+    padding: 10px; 
+    float: right;
+    width: 100px;  
+  }
+
+.bt{
+    margin: 10px 10px 
+}  
+
+  #delcolor{
+      background-color: red
+  }
+
+.block-div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+} 
+
+.firstLabel{
+    margin-right: 10px;
+}
+
+span{
+    font-size: 20px;
+    font-style: bold;
+}
+
+  

@@ -1,0 +1,60 @@
+<div class="body">
+  <h3>
+    {{addEmployee ? 'Edit' : 'Add'}} Employee
+  </h3>
+  <hr>
+
+  <form ngNativeValidate #empForm = "ngForm" (ngSubmit) = "saveEmployee(); empForm.reset()">
+
+  <div class="block">
+
+    <div>
+      First Name<br><br>
+      <input required type="text" name="employeeFirstName" placeholder="First Name"  [(ngModel)] = "emp.employeeFirstName">
+    </div>
+
+    <div>
+        Last Name<br><br>
+        <input type="text" name="employeeLastName" placeholder="Last Name" [(ngModel)] = "emp.employeeLastName">
+    </div>
+
+    <div>
+        Age<br><br>
+        <input type="number" min="1" required name="employeeAge" placeholder="Age" [(ngModel)] = "emp.employeeAge">
+    </div>
+
+    <div>
+        Gender<br><br>
+        <select required name="employeeGender" [(ngModel)] = "emp.employeeGender">
+          <option value="null" disabled>Select</option>  
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          </select>
+    </div>
+
+    <div>
+        Designation<br><br>
+        <select required name="designation"  [(ngModel)] = "emp.designation">
+            <option value="null" disabled>Select</option>
+            <option value="Trainee">Trainee</option>
+            <option value="Associate">Associate</option>
+            <option value="Lead">Lead</option>
+            <option value="Manager">Manager</option>
+        </select>
+    </div>
+
+    <div>
+        Phone Number<br><br>
+        <input type="number" minlength="5" name="employeePhoneNumber" placeholder="Phone Number"
+         [(ngModel)] = "emp.employeePhoneNumber">
+    </div>
+
+  </div>
+
+  <div>
+      <button type="button" class="bt" id="resetColor" (click) = "resetForm(empForm)">Reset</button>
+      <button type="submit" class="bt">Save</button>
+  </div>
+</form>
+</div>
+

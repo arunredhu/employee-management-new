@@ -1,0 +1,28 @@
+.body{
+    margin: 50px 170px 0px 170px;
+}
+
+.block{
+    margin: 20px 120px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px 2em
+}
+
+input, select{
+    width: 200px;
+    height: 20px;
+}
+
+.bt {
+    background-color: blue;
+    color: white;
+    padding: 10px; 
+    float: right;
+    width: 100px; 
+    margin: 10px 20px  
+  }
+
+  #resetColor{
+      background-color: gray;
+  }
