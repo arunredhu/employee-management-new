@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
-import { IEmployee } from './employee-interface';
+import { Employee } from './employee-interface';
 
 @Injectable({
     providedIn : 'root'
 })
 
 export class EmployeeService{
-    listEmployees : IEmployee[] = 
+    listEmployees : Employee[] = 
         [
           {
-            employeeID: 1,
+            employeeId: 1,
             employeeFirstName: 'Aaron',
             employeeLastName: 'Orozco',
             employeeAge: 24,
@@ -18,7 +18,7 @@ export class EmployeeService{
             employeePhoneNumber: 12345678,
           },
           {
-            employeeID: 2,
+            employeeId: 2,
             employeeFirstName: 'Kirk',
             employeeLastName: 'Jones',
             employeeAge: 22,
@@ -27,7 +27,7 @@ export class EmployeeService{
             employeePhoneNumber: 12345678,
           },
           {
-            employeeID: 3,
+            employeeId: 3,
             employeeFirstName: 'Martin',
             employeeAge: 28,
             employeeGender: 'Male',
@@ -35,7 +35,7 @@ export class EmployeeService{
             employeePhoneNumber: 12345678,
           },
           {
-            employeeID: 4,
+            employeeId: 4,
             employeeFirstName: 'Rob',
             employeeLastName: 'Heaston',
             employeeAge: 32,
@@ -44,25 +44,25 @@ export class EmployeeService{
           },
         ];
 
-    getEmployees() : IEmployee[]{
+    getEmployees() : Employee[]{
       return this.listEmployees;
     } 
     
-    getEmp(id : number) : IEmployee{
-      return this.listEmployees.find(item => item.employeeID === id);
+    getEmployee(id : number) : Employee{
+      return this.listEmployees.find(item => item.employeeId === id);
     } 
 
-    saveEmployee(saveEmp: IEmployee){
-      if(saveEmp.employeeID === null){
+    saveEmployee(emp: Employee){
+      if(emp.employeeId === null){
         const maxid = this.listEmployees.reduce(function(e1,e2){
-          return (e1.employeeID > e2.employeeID) ? e1 : e2;
-        }).employeeID;
-        saveEmp.employeeID = maxid + 1;
-        console.log(saveEmp);
-        this.listEmployees.push(Object.assign({}, saveEmp));
+          return (e1.employeeId > e2.employeeId) ? e1 : e2;
+        }).employeeId;
+        emp.employeeId = maxid + 1;
+        console.log(emp);
+        this.listEmployees.push(Object.assign({}, emp));
       }else{
-       const foundIndex =  this.listEmployees.findIndex(e => e.employeeID === saveEmp.employeeID);
-       this.listEmployees[foundIndex] = Object.assign({}, saveEmp);
+       const foundIndex =  this.listEmployees.findIndex(e => e.employeeId === emp.employeeId);
+       this.listEmployees[foundIndex] = Object.assign({}, emp);
       }
       
     }

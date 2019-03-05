@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { IEmployee } from '../employee-interface';
+
 import { EmployeeService } from '../employee.service';
+import { Employee } from '../employee-interface';
+
 
 @Component({
   selector: 'app-add-employee',
@@ -11,8 +13,8 @@ import { EmployeeService } from '../employee.service';
 export class AddEmployeeComponent implements OnInit {
 
   addEmployee : boolean = false;
-  emp: IEmployee = {
-    employeeID: null,
+  emp: Employee = {
+    employeeId: null,
     employeeFirstName: null,
     employeeLastName: null,
     employeeAge: null,
@@ -46,7 +48,7 @@ export class AddEmployeeComponent implements OnInit {
 
   editEmployee(id : number){
     if(id !== 0 ){
-      this.emp = this.employeeService.getEmp(id);
+      this.emp = this.employeeService.getEmployee(id);
     }
   }
 
