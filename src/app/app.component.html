@@ -1,13 +1,30 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div>
   <div id="header">
-    <h1>
-      {{ title }}!
-    </h1>
+    <h1>{{ title }}!</h1>
   </div>
-<a [routerLink] = "['/home']"></a>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
 </div>
 
-<router-outlet></router-outlet>
+ 
+
+<!-- <div fxFlexFill fxLayout="column">
+  <h2> {{ title }}!</h2>
+
+  <div fxLayout="column" fxFlex>
+    <div fxFlex style="margin: 1%">
+      <router-outlet></router-outlet>
+    </div>
+    <footer fxLayout="column">
+      <div fxLayout="row">
+        <hr fxFlex="100">
+      </div>
+    </footer>
+  </div>
+</div> -->
+
+
 
 
