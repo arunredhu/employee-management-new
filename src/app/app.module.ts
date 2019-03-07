@@ -1,13 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {FormsModule} from '@angular/forms';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { EmployeeModule } from './employee/employee.module';
-import { MaterialModule } from './shared/material.module';
+import { EmployeeModule } from './components/employee/employee.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -16,11 +15,10 @@ import { MaterialModule } from './shared/material.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
     EmployeeModule,
     FlexLayoutModule,
     BrowserAnimationsModule,
-    MaterialModule
+    SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

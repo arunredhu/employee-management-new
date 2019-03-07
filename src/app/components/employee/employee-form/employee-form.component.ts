@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
-import { EmployeeService } from '../employee.service';
-import { Employee } from '../employee-interface';
+import { EmployeeService } from '../shared/employee.service';
+import { Employee } from 'src/app/models/employee-interface';
 
 
 @Component({
-  selector: 'app-add-employee',
-  templateUrl: './add-employee.component.html',
-  styleUrls: ['./add-employee.component.scss']
+  selector: 'app-employee-form',
+  templateUrl: './employee-form.component.html',
+  styleUrls: ['./employee-form.component.scss']
 })
-export class AddEmployeeComponent implements OnInit {
+export class EmployeeFormComponent implements OnInit {
 
   addEmployee : boolean = false;
   emp: Employee = {
@@ -39,7 +39,7 @@ export class AddEmployeeComponent implements OnInit {
   saveEmployee(){
       // console.log(this.emp);
       this.employeeService.saveEmployee(this.emp);
-      this._router.navigate(['home'])
+      this._router.navigate(['employee'])
   }
 
   resetForm(form :any){

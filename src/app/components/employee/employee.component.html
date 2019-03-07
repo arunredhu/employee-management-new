@@ -6,7 +6,7 @@
     </span>
 
         <a mat-raised-button class="bt" color="primary" 
-        [routerLink]="['/add-employee']">Add New</a>
+        [routerLink]="['/employee-form']">Add New</a>
 
   </mat-card>
 
@@ -37,7 +37,7 @@
           <button class="bt" mat-raised-button color="accent"
             (click)="onDeleteClick(employee.employeeId)">Delete</button>
           <a class="bt" mat-raised-button color="primary"
-            [routerLink]="['/add-employee', employee.employeeId]">Edit</a>
+            [routerLink]="['/employee-form', employee.employeeId]">Edit</a>
         </mat-card-actions>
 
       </mat-card>
