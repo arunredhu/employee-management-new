@@ -1,52 +1,48 @@
 <div>
-<div class="card-header">
-  <span>
-    Search : 
-    <input type="text"
-    [(ngModel)] = 'listFilter'/>
-  </span>
-  
-  <span>
-      <a [routerLink] = "['/add-employee']">
-         <button id="add-btn">
-           Add New
-         </button>
-     </a>
-  </span>
-</div>
+  <mat-card class="card-header">
+    <span>
+      Search :
+      <input type="text" [(ngModel)]='listFilter' />
+    </span>
 
-<div class="box">
-  <div class="body" *ngFor = 'let employee of filteredEmployee'>
-    <div>
-      <span class="firstLabel">{{employee.employeeFirstName}}</span>
-      <span>{{employee.employeeLastName}}</span>
-    </div>
-    <br>
+        <a mat-raised-button class="bt" color="primary" 
+        [routerLink]="['/add-employee']">Add New</a>
 
-      <div class="block-div">
+  </mat-card>
 
-        <div>
-          <div class="row">
-             {{employee.employeeAge}},
-             {{employee.employeeGender}}
-          </div>
+  <mat-grid-list cols="2" rowHeight="200px" [gutterSize]="'10px'">
+    <mat-grid-tile *ngFor='let employee of filteredEmployee'>
 
-          <p>{{employee.designation}}</p>
-        </div>
+      <mat-card>
 
-        <div>
-          <button class="bt" id="delcolor" (click) = "onDeleteClick(employee.employeeId)">Delete</button>
-          <a [routerLink] = "['/add-employee', employee.employeeId]">
-            <button type="button" class="bt">
-              Edit
-            </button>
-          </a>
-            
-          
-        </div>  
-        
-      </div>
+        <mat-card-header>
+          <mat-card-title>
+            <span class="firstLabel">{{employee.employeeFirstName}}</span>
+            <span>{{employee.employeeLastName}}</span>
+          </mat-card-title>
+          <mat-card-subtitle>
+            {{employee.designation}}
+          </mat-card-subtitle>
+        </mat-card-header>
 
-  </div>
-</div>
+        <mat-card-content>
+          <p>
+            {{employee.employeeAge}},
+            {{employee.employeeGender}}
+          </p>
+          <!-- <p>{{employee.designation}}</p> -->
+        </mat-card-content>
+
+        <mat-card-actions>
+          <button class="bt" mat-raised-button color="accent"
+            (click)="onDeleteClick(employee.employeeId)">Delete</button>
+          <a class="bt" mat-raised-button color="primary"
+            [routerLink]="['/add-employee', employee.employeeId]">Edit</a>
+        </mat-card-actions>
+
+      </mat-card>
+
+    </mat-grid-tile>
+  </mat-grid-list>
+
 </div>

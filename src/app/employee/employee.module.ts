@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { EmployeeComponent } from './employee.component';
+import { MaterialModule } from '../shared/material.module';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { EmployeeComponent } from './employee.component';
   imports: [
     CommonModule,
     FormsModule,
+    MaterialModule,
     RouterModule.forChild([
       {path : 'add-employee', component : AddEmployeeComponent},
       {path : 'add-employee/:id', component : AddEmployeeComponent},
