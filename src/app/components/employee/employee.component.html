@@ -2,11 +2,10 @@
   <mat-card class="card-header">
     <span>
       Search :
-      <input type="text" [(ngModel)]='listFilter' />
+      <input matInput placeholder="Search" [(ngModel)]='listFilter'>
     </span>
 
-        <a mat-raised-button class="bt" color="primary" 
-        [routerLink]="['/employee-form']">Add New</a>
+    <a mat-raised-button class="addbtn" color="primary" [routerLink]="['/employee-form']">Add New</a>
 
   </mat-card>
 
@@ -30,7 +29,6 @@
             {{employee.employeeAge}},
             {{employee.employeeGender}}
           </p>
-          <!-- <p>{{employee.designation}}</p> -->
         </mat-card-content>
 
         <mat-card-actions>
