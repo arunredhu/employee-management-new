@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { EmployeeService } from './shared/employee.service';
-import { Employee } from 'src/app/models/employee-interface';
+import { Employee } from './models/employee-interface';
 
 @Component({
   templateUrl: './employee.component.html',

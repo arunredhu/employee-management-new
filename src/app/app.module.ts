@@ -5,7 +5,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { EmployeeModule } from './components/employee/employee.module';
+import { EmployeeModule } from './employee/employee.module';
 import { SharedModule } from './shared/shared.module';
 
 @NgModule({
