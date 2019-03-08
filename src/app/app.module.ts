@@ -7,10 +7,12 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { EmployeeModule } from './employee/employee.module';
 import { SharedModule } from './shared/shared.module';
+import { SidenavComponent } from './sidenav/sidenav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    SidenavComponent,
   ],
   imports: [
     BrowserModule,
