@@ -2,51 +2,61 @@
   <mat-card class="card-header">
     <span>
       Search :
-      <input matInput placeholder="Search" [(ngModel)]='listFilter'>
+      <input matInput placeholder="Search" [(ngModel)]="listFilter" />
     </span>
 
-    <a mat-raised-button class="addbtn" color="primary" [routerLink]="['/employee-form']">
+    <a
+      mat-raised-button
+      class="addbtn"
+      color="primary"
+      [routerLink]="['/employee-form']"
+    >
       <mat-icon>add_circle_outline</mat-icon>
       <span>Add New</span>
     </a>
-
   </mat-card>
 
   <mat-grid-list cols="2" rowHeight="300px" [gutterSize]="'10px'">
-    <mat-grid-tile *ngFor='let employee of filteredEmployee'>
-
+    <mat-grid-tile *ngFor="let employee of filteredEmployee">
       <mat-card>
-
         <mat-card-header>
           <mat-card-title>
-            <span class="firstLabel">{{employee.employeeFirstName}}</span>
-            <span>{{employee.employeeLastName}}</span>
+            <span class="firstLabel">{{ employee.employeeFirstName }}</span>
+            <span>{{ employee.employeeLastName }}</span>
           </mat-card-title>
           <mat-card-subtitle>
-            {{employee.designation}}
+            {{ employee.designation }}
           </mat-card-subtitle>
         </mat-card-header>
 
         <mat-card-content>
           <p>
-            {{employee.employeeBio}}
+            {{ employee.employeeBio }}
           </p>
           <p>
-            {{employee.employeeAge}},
-            {{employee.employeeGender}}
+            {{ employee.employeeAge }},
+            {{ employee.employeeGender }}
           </p>
         </mat-card-content>
 
         <mat-card-actions>
-          <button class="bt" mat-raised-button color="accent"
-            (click)="onDeleteClick(employee.employeeId)">Delete</button>
-          <a class="bt" mat-raised-button color="primary"
-            [routerLink]="['/employee-form', employee.employeeId]">Edit</a>
+          <button
+            class="bt"
+            mat-raised-button
+            color="accent"
+            (click)="onDeleteClick(employee.employeeId)"
+          >
+            Delete
+          </button>
+          <a
+            class="bt"
+            mat-raised-button
+            color="primary"
+            [routerLink]="['/employee-form', employee.employeeId]"
+            >Edit</a
+          >
         </mat-card-actions>
-
       </mat-card>
-
     </mat-grid-tile>
   </mat-grid-list>
-
 </div>

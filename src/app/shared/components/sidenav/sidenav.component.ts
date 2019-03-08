@@ -8,17 +8,15 @@ const SMALL_WIDTH_BREAKPOINT = 720;
   styleUrls: ['./sidenav.component.scss']
 })
 export class SidenavComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
+  ngOnInit() {}
 
-  ngOnInit() {
-  }
+  private mediaMatcher: MediaQueryList = matchMedia(
+    `(max-width: ${SMALL_WIDTH_BREAKPOINT}px)`
+  );
 
-  private mediaMatcher : MediaQueryList =
-  matchMedia(`(max-width: ${SMALL_WIDTH_BREAKPOINT}px)`);
-
-  isSmallScreen(): boolean{
+  isSmallScreen(): boolean {
     return this.mediaMatcher.matches;
   }
-
 }

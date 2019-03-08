@@ -1,0 +1,30 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.sidenav-container {
+  position: absolute;
+  top: 64px;
+  height: calc(100% - 64px);
+  flex: 1;
+  width: 100%;
+}
+
+.sidenav {
+  width: 240px;
+}
+
+.sidenav-content {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.wrapper {
+  overflow: auto;
+}
