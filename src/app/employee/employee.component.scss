@@ -1,28 +1,8 @@
-.card-header{
-    margin: 1%;
-    // position: relative;
-}
-
-.bt{
-    float: right;
- }
-
- .addbtn{
-     @extend .bt;
-    //  display: flex;
-    //  align-self: center;
-     margin-top: -7px
- }
-
-.firstLabel{
-    margin-right: 3%;
+.card-header {
+  margin: 1%;
 }
 
 mat-card {
-    width: calc(100% - 50px);
-    height: calc(100% - 50px);
-  }
-
-
-
-  
+  width: calc(100% - 50px);
+  height: calc(100% - 50px);
+}

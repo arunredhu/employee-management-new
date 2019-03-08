@@ -1,19 +1,21 @@
-<div class="body">
+<div>
   <mat-card class="card-header">
-    <span>
-      Search :
-      <input matInput placeholder="Search" [(ngModel)]="listFilter" />
-    </span>
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+      <span>
+        Search :
+        <input matInput placeholder="Search" [(ngModel)]="listFilter" />
+      </span>
 
-    <a
-      mat-raised-button
-      class="addbtn"
-      color="primary"
-      [routerLink]="['/employee-form']"
-    >
-      <mat-icon>add_circle_outline</mat-icon>
-      <span>Add New</span>
-    </a>
+      <a
+        mat-raised-button
+        class="addbtn"
+        color="primary"
+        [routerLink]="['/employee-form']"
+      >
+        <mat-icon>add_circle_outline</mat-icon>
+        <span>Add New</span>
+      </a>
+    </div>
   </mat-card>
 
   <mat-grid-list cols="2" rowHeight="300px" [gutterSize]="'10px'">
