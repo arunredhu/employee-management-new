@@ -5,6 +5,7 @@ export interface Employee{
         employeeAge: number,
         employeeGender: string,
         designation: string,
-        employeePhoneNumber?: number
+        employeePhoneNumber?: number,
+        employeeBio?: string,
     }
 

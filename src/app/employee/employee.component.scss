@@ -1,5 +1,6 @@
 .card-header{
     margin: 1%;
+    // position: relative;
 }
 
 .bt{
@@ -8,8 +9,9 @@
 
  .addbtn{
      @extend .bt;
-     display: flex;
-     align-self: center
+    //  display: flex;
+    //  align-self: center;
+     margin-top: -7px
  }
 
 .firstLabel{
